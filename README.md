@@ -1,7 +1,7 @@
 # Fresh System
 
-It takes too much time to set up a fresh, clean system. This script is my
-attempt at doing it faster. It holds the programs I use the most and rely on
-for my daily tasks.
+I started this after I completed three isntallations back to back to back, and
+all of what is added now is from memory of what I think I need to install. As
+more things come up, I'll add them to the script.
 
 Since I primarily use Debian, the script expects 'apt-get' is available.
