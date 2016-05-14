@@ -1,5 +1,3 @@
-# Fresh System
-
 I started this after I completed three isntallations back to back to back, and
 all of what is added now is from memory of what I think I need to install. As
 more things come up, I'll add them to the script.
