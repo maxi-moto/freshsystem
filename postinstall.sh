@@ -18,13 +18,14 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 # add repos
-ppa="deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
-ppa_src="deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
+# I don't think I want to use oracle java anymore
+# ppa="deb http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
+# ppa_src="deb-src http://ppa.launchpad.net/webupd8team/java/ubuntu xenial main"
 
 printf "\nAdding required repos ...\n"
-echo $ppa | tee /etc/apt/sources.list.d/webupd8team-java.list
-echo $ppa_src | tee -a /etc/apt/sources.list.d/webupd8team-java.list
-apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
+# echo $ppa | tee /etc/apt/sources.list.d/webupd8team-java.list
+# echo $ppa_src | tee -a /etc/apt/sources.list.d/webupd8team-java.list
+# apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys EEA14886
 
 printf "${green}\n\nStarting installation ...\n${default}"
 printf "Interaction may be required\n"
@@ -32,10 +33,10 @@ apt-get update -y
 apt-get upgrade -y
 
 # development tools
-$install git vim tmux oracle-java8-installer
+$install git vim tmux
 
 # system tools
-$install htop tree ack-grep
+$install curl htop tree ack-grep
 
 printf "\n\nRemoving uncessary and unwanted files ...\n"
 $remove nano
